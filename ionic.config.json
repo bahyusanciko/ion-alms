@@ -1,0 +1,7 @@
+{
+  "name": "ion-alms",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

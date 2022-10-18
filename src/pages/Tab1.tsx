@@ -1,5 +1,5 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import { IonButton, IonCard, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonInput, IonItem, IonLabel, IonPage, IonRow, IonTitle, IonToolbar } from '@ionic/react';
+import { cardOutline, cashOutline, walletOutline } from 'ionicons/icons';
 import './Tab1.css';
 
 const Tab1: React.FC = () => {
@@ -7,16 +7,45 @@ const Tab1: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 1</IonTitle>
+          <IonTitle>Zakat Profesi</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Tab 1</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer name="Tab 1 page" />
+        <IonCard>
+          <IonGrid>
+            <IonRow className="ion-justify-content-center">
+              <IonCol class="ion-align-self-center" size-md="12" size-lg="12" size-xs="12">
+                <IonItem>
+                    <IonIcon 
+                    slot="start"
+                    icon={walletOutline}
+                    />
+                    <IonLabel position="floating">Gaji PerBulan</IonLabel>
+                  <IonInput type="number" placeholder=" Masukan Jumlah Gaji" required />
+                </IonItem>
+                <IonItem>
+                  <IonIcon 
+                    slot="start"
+                    icon={cardOutline}
+                    />
+                  <IonLabel position="floating">Pendapatan Lainnya</IonLabel>
+                  <IonInput type="number" placeholder=" Masukan Jumlah Pendapatan Lainnya" required/>
+                </IonItem>
+                <IonItem>
+                  <IonIcon 
+                    slot="start"
+                    icon={cashOutline}
+                    />
+                  <IonLabel position="floating">Hutang / Cicilan</IonLabel>
+                  <IonInput type="number" placeholder=" Masukan Jumlah Hutang / Cicilan" required/>
+                </IonItem>
+                <IonButton expand="block" type="submit" >
+                  HITUNG ZAKAT
+                </IonButton>
+              </IonCol>
+            </IonRow>
+          </IonGrid>
+        </IonCard>
       </IonContent>
     </IonPage>
   );

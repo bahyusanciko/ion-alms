@@ -2,7 +2,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
-  appName: 'ion-alms',
+  appName: 'Kalkulator Zakat',
   webDir: 'build',
   bundledWebRuntime: false
 };
